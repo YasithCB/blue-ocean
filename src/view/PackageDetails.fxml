@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="packageDetailsContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PackageDetailsController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #303030;">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="21.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="17.0" text="HOTEL BLUE OCEAN | Package Details" textFill="WHITE" />
+            <JFXButton layoutX="1179.0" layoutY="6.0" onAction="#btnMinimizeOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="_" textFill="WHITE">
+               <font>
+                  <Font name="Capital Clickbait" size="17.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="buttonMinimize" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutX="1226.0" layoutY="6.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttonClose" />
+                  <String fx:value="buttonClose" />
+               </styleClass>
+            </JFXButton>
+            <AnchorPane layoutY="54.0" prefHeight="666.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="666.0" fitWidth="1280.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/dashboard%20bg%20blured.jpg" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="tblLightPackages" layoutX="162.0" layoutY="57.0" prefHeight="162.0" prefWidth="956.0">
+                    <columns>
+                      <TableColumn fx:id="colLightPackageFunctions" prefWidth="533.0" text="Functions" />
+                      <TableColumn fx:id="colLightPackagesPrice" minWidth="0.0" prefWidth="113.0" text="Price" />
+                        <TableColumn fx:id="colLightPackagePackageCode" prefWidth="309.0" text="Package Code" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="462.0" layoutY="29.0" style="-fx-background-color: #8E1390;" text="  LIGHT PACKAGES - Price For 1 Person  " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblMidPackages" layoutX="162.0" layoutY="267.0" prefHeight="162.0" prefWidth="956.0">
+                     <columns>
+                        <TableColumn fx:id="colMidPackagesFunctions" prefWidth="544.0" text="Functions" />
+                        <TableColumn fx:id="colMidPackagesPrice" minWidth="0.0" prefWidth="105.0" text="Price" />
+                        <TableColumn fx:id="colMidPackagesPackageCode" prefWidth="306.0" text="Package Code" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="470.0" layoutY="239.0" style="-fx-background-color: #8E1390;" text="  MID PACKAGES - Price For 1 Person  " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblPremiumPackages" layoutX="162.0" layoutY="475.0" prefHeight="162.0" prefWidth="956.0">
+                     <columns>
+                        <TableColumn fx:id="colPremiumPackagesFunctions" prefWidth="554.0" text="Functions" />
+                        <TableColumn fx:id="colPremiumPackagesPrice" minWidth="0.0" prefWidth="106.0" text="Price" />
+                        <TableColumn fx:id="colPremiumPackagesPackageCode" prefWidth="295.0" text="Package Code" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="444.0" layoutY="447.0" style="-fx-background-color: #8E1390;" text="  PREMIUM PACKAGES - Price For 1 Person  " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="58.0" fitWidth="48.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <ButtonBar layoutX="14.0" layoutY="14.0" onMouseClicked="#btnBackOnAction" opacity="0.8" styleClass="buttonMinimize" stylesheets="@../css/css.css">
+                     <buttons>
+                        <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/outline_arrow_back_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Label maxWidth="40.0" minWidth="35.0" prefHeight="19.0" text="Back" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

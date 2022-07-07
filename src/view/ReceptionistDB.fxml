@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ReceptionistDBContext" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReceptionistDBController">
+   <children>
+      <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="21.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="75.0" layoutY="17.0" text="HOTEL BLUE OCEAN" textFill="WHITE" />
+      <JFXButton layoutX="1179.0" layoutY="6.0" onAction="#btnMinimizeOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="_" textFill="WHITE">
+         <font>
+            <Font name="Capital Clickbait" size="17.0" />
+         </font>
+         <styleClass>
+            <String fx:value="table-row-cell" />
+            <String fx:value="buttonMinimize" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="1226.0" layoutY="6.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="X" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="buttonClose" />
+            <String fx:value="buttonClose" />
+         </styleClass>
+      </JFXButton>
+      <AnchorPane layoutY="54.0" prefHeight="666.0" prefWidth="1280.0">
+         <children>
+            <ImageView fitHeight="666.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/dashboard%20bg%20blured.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="344.0" layoutY="81.0" onAction="#btnMakeAReservationOnAction" prefHeight="137.0" prefWidth="286.0" style="-fx-background-color: #00899C;" text="Make a Reservation" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="5.0" layoutX="650.0" layoutY="81.0" onAction="#btnUserDetailsOnAction" prefHeight="137.0" prefWidth="286.0" style="-fx-background-color: #523CAB;" text="User Details" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="344.0" layoutY="232.0" onAction="#btnAvailableRoomsOnAction" prefHeight="137.0" prefWidth="286.0" style="-fx-background-color: #D8482D;" text="Available Rooms" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="344.0" layoutY="386.0" onAction="#btnCustomerReservedRoomsOnAction" prefHeight="137.0" prefWidth="286.0" style="-fx-background-color: #018A22;" text="Customer Reserved Rooms" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" graphicTextGap="5.0" layoutX="650.0" layoutY="232.0" onAction="#btnSwitchToLoginOnAction" prefHeight="136.0" prefWidth="138.0" style="-fx-background-color: #004FAE;" text="Switch to an Admin" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="798.0" layoutY="232.0" onAction="#btnMealPlansOnAction" prefHeight="136.0" prefWidth="138.0" style="-fx-background-color: #203351;" text="Meal Plans" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" graphicTextGap="5.0" layoutX="650.0" layoutY="386.0" onAction="#btnPackageDetailsOnAction" prefHeight="136.0" prefWidth="138.0" style="-fx-background-color: #8E1390;" text="Package Details" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" graphicTextGap="5.0" layoutX="798.0" layoutY="386.0" onAction="#btnMaintenanceRoomsOnAction" prefHeight="136.0" prefWidth="138.0" style="-fx-background-color: #AE183B;" text="Maintenance Rooms" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="94.0" fitWidth="37.0" layoutX="1212.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_account_circle_white_24dp.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblUserName" alignment="CENTER_RIGHT" layoutX="1056.0" layoutY="34.0" prefHeight="17.0" prefWidth="150.0" text="John Smith" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="56.0" fitWidth="48.0" layoutX="463.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_group_add_white_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="48.0" layoutX="463.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_event_available_white_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="48.0" layoutX="463.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_motion_photos_paused_white_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="48.0" layoutX="769.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_person_outline_white_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="48.0" layoutX="695.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_admin_panel_settings_white_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="48.0" layoutX="695.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_info_white_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="48.0" layoutX="843.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_cleaning_services_white_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="48.0" layoutX="843.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/outline_ramen_dining_white_48dp.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

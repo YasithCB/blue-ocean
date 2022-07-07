@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addRoomContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddRoomsController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #303030;">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="21.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="17.0" text="HOTEL BLUE OCEAN | Add Rooms" textFill="WHITE" />
+            <JFXButton layoutX="1179.0" layoutY="6.0" onAction="#btnMinimizeOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="_" textFill="WHITE">
+               <font>
+                  <Font name="Capital Clickbait" size="17.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="buttonMinimize" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutX="1226.0" layoutY="6.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttonClose" />
+                  <String fx:value="buttonClose" />
+               </styleClass>
+            </JFXButton>
+            <AnchorPane layoutY="54.0" prefHeight="666.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="666.0" fitWidth="1280.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/dashboard%20bg%20blured.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="58.0" fitWidth="48.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#018a22" height="42.0" layoutX="290.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="734.0" />
+                  <ButtonBar layoutX="14.0" layoutY="14.0" onMouseClicked="#btnBackOnAction" opacity="0.8" styleClass="buttonMinimize" stylesheets="@../css/css.css">
+                     <buttons>
+                        <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/outline_arrow_back_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Label maxWidth="40.0" minWidth="35.0" prefHeight="19.0" text="Back" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                     </buttons>
+                  </ButtonBar>
+                  <Label layoutX="622.0" layoutY="31.0" text="Add Rooms" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="26.0" layoutX="580.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/outline_king_bed_white_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="420.0" layoutY="175.0" text="Room ID">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtRoomId" layoutX="550.0" layoutY="169.0" prefHeight="25.0" prefWidth="426.0" />
+                  <Label layoutX="420.0" layoutY="214.0" text="AC">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="rbtnAcYes" layoutX="550.0" layoutY="216.0" selected="true" text="Yes">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="AC" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rbtnAcNo" layoutX="613.0" layoutY="216.0" text="No" toggleGroup="$AC">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label layoutX="420.0" layoutY="255.0" text="Human Capacity">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtHumanCapacity" layoutX="550.0" layoutY="249.0" prefHeight="25.0" prefWidth="426.0" />
+                  <Label layoutX="420.0" layoutY="295.0" text="Price">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtPrice" layoutX="550.0" layoutY="289.0" prefHeight="25.0" prefWidth="426.0" />
+                  <JFXButton buttonType="RAISED" layoutX="467.0" layoutY="587.0" onAction="#btnAddOnAction" prefHeight="42.0" prefWidth="380.0" style="-fx-background-color: #018a22;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

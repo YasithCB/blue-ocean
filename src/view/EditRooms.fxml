@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="editRoomsContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditRoomsController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #303030;">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="21.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="75.0" layoutY="17.0" text="HOTEL BLUE OCEAN | Edit Rooms" textFill="WHITE" />
+                  <JFXButton layoutX="1179.0" layoutY="6.0" onAction="#btnMinimizeOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="_" textFill="WHITE">
+                     <font>
+                        <Font name="Capital Clickbait" size="17.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="table-row-cell" />
+                        <String fx:value="buttonMinimize" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton layoutX="1226.0" layoutY="6.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="buttonClose" />
+                        <String fx:value="buttonClose" />
+                     </styleClass>
+                  </JFXButton>
+                  <AnchorPane layoutY="54.0" prefHeight="666.0" prefWidth="1280.0">
+                     <children>
+                        <ImageView fitHeight="666.0" fitWidth="1280.0" layoutX="5.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/dashboard%20bg%20blured.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="58.0" fitWidth="48.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="284.0" layoutX="541.0" layoutY="240.0" opacity="0.57" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="602.0" />
+                        <ButtonBar layoutX="14.0" layoutY="14.0" onMouseClicked="#btnBackOnAction" styleClass="buttonMinimize" stylesheets="@../css/css.css">
+                           <buttons>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/outline_arrow_back_white_48dp.png" />
+                                 </image>
+                              </ImageView>
+                              <Label maxWidth="40.0" minWidth="35.0" prefHeight="19.0" text="Back" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </buttons>
+                        </ButtonBar>
+                        <TableView fx:id="tblAvailableRooms" layoutX="59.0" layoutY="87.0" prefHeight="531.0" prefWidth="429.0">
+                          <columns>
+                            <TableColumn fx:id="colAvailableRoomsId" prefWidth="195.0" text="Room ID" />
+                            <TableColumn fx:id="colAvailableRoomsAC" minWidth="9.0" prefWidth="87.0" text="AC " />
+                              <TableColumn fx:id="colAvailableRoomsHumanCapacity" prefWidth="146.0" text="Human Capacity" />
+                          </columns>
+                        </TableView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#203351" height="42.0" layoutX="273.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="734.0" />
+                        <Label layoutX="597.0" layoutY="31.0" text="Edit Rooms" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="552.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/outline_king_bed_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="595.0" layoutY="274.0" text="Room ID">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtRoomId" layoutX="730.0" layoutY="268.0" prefHeight="25.0" prefWidth="361.0" />
+                        <Label layoutX="595.0" layoutY="317.0" text="AC">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="595.0" layoutY="413.0" text="Human Capacity">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtHumanCapacity" layoutX="730.0" layoutY="407.0" prefHeight="25.0" prefWidth="361.0" />
+                        <Label layoutX="595.0" layoutY="461.0" text="Price">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtPrice" layoutX="730.0" layoutY="455.0" prefHeight="25.0" prefWidth="361.0" />
+                        <JFXButton buttonType="RAISED" layoutX="653.0" layoutY="576.0" onAction="#tbnSaveOnAction" prefHeight="42.0" prefWidth="380.0" style="-fx-background-color: #203351;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="596.0" layoutY="367.0" text="Availability">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtAc" layoutX="730.0" layoutY="313.0" prefHeight="25.0" prefWidth="361.0" promptText="&quot;Yes&quot; / &quot;No&quot;" />
+                        <JFXTextField fx:id="txtAvailability" layoutX="730.0" layoutY="362.0" prefHeight="25.0" prefWidth="361.0" promptText="&quot;Yes&quot; / &quot;No&quot;" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

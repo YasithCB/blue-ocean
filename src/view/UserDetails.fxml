@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="UserDetailsContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserDetailsController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #303030;">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="21.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="17.0" text="HOTEL BLUE OCEAN | User Details" textFill="WHITE" />
+            <JFXButton layoutX="1179.0" layoutY="6.0" onAction="#btnMinimizeOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="_" textFill="WHITE">
+               <font>
+                  <Font name="Capital Clickbait" size="17.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="buttonMinimize" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutX="1226.0" layoutY="6.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttonClose" />
+                  <String fx:value="buttonClose" />
+               </styleClass>
+            </JFXButton>
+            <AnchorPane layoutY="54.0" prefHeight="666.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="666.0" fitWidth="1280.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/dashboard%20bg%20blured.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="58.0" fitWidth="48.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c72467" height="42.0" layoutX="273.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="734.0" />
+                  <ButtonBar layoutX="14.0" layoutY="14.0" onMouseClicked="#btnBackOnAction" opacity="0.8" styleClass="buttonMinimize" stylesheets="@../css/css.css">
+                     <buttons>
+                        <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/outline_arrow_back_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Label maxWidth="40.0" minWidth="35.0" prefHeight="19.0" text="Back" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                     </buttons>
+                  </ButtonBar>
+                  <Label layoutX="616.0" layoutY="30.0" text="User Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="26.0" layoutX="574.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/outline_person_outline_white_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="379.0" layoutY="391.0" text="Name">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtName" layoutX="509.0" layoutY="385.0" prefHeight="25.0" prefWidth="426.0" />
+                  <JFXButton buttonType="RAISED" layoutX="467.0" layoutY="584.0" onAction="#btnSaveChangesOnAction" prefHeight="42.0" prefWidth="380.0" style="-fx-background-color: #c72467;" text="Save Changes" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="379.0" layoutY="430.0" text="Password">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="286.0" fitWidth="300.0" layoutX="490.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/user%20details%20logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="379.0" layoutY="470.0" text="New Password">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="pwNewPassword" layoutX="509.0" layoutY="468.0" prefHeight="25.0" prefWidth="426.0" />
+                  <Label layoutX="379.0" layoutY="510.0" text="Re-enter">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="pwReEnter" layoutX="509.0" layoutY="508.0" prefHeight="25.0" prefWidth="426.0" />
+                  <JFXTextField fx:id="txtPassword" layoutX="509.0" layoutY="428.0" prefHeight="25.0" prefWidth="426.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

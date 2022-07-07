@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerReservedRoomsContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerReservedRoomsController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #303030;">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="40.0" layoutX="21.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="17.0" text="HOTEL BLUE OCEAN | Customer Reserved Rooms" textFill="WHITE" />
+            <JFXButton layoutX="1179.0" layoutY="6.0" onAction="#btnMinimizeOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="_" textFill="WHITE">
+               <font>
+                  <Font name="Capital Clickbait" size="17.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="buttonMinimize" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutX="1226.0" layoutY="6.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/css.css" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttonClose" />
+                  <String fx:value="buttonClose" />
+               </styleClass>
+            </JFXButton>
+            <AnchorPane layoutY="54.0" prefHeight="666.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="666.0" fitWidth="1280.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/dashboard%20bg%20blured.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="58.0" fitWidth="48.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="536.0" layoutY="539.0" opacity="0.46" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="286.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#018a22" height="42.0" layoutX="273.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="734.0" />
+                  <ButtonBar layoutX="14.0" layoutY="14.0" onMouseClicked="#btnBackOnAction" opacity="0.8" styleClass="buttonMinimize" stylesheets="@../css/css.css">
+                     <buttons>
+                        <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/outline_arrow_back_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Label maxWidth="40.0" minWidth="35.0" prefHeight="19.0" text="Back" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                     </buttons>
+                  </ButtonBar>
+                  <Label layoutX="561.0" layoutY="36.0" text="Customer Reserved Rooms" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="26.0" layoutX="517.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/outline_motion_photos_paused_white_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="tblCustomerReservedRooms" layoutX="52.0" layoutY="87.0" prefHeight="389.0" prefWidth="1176.0">
+                    <columns>
+                      <TableColumn fx:id="colRoomId" prefWidth="113.0" text="Room ID" />
+                      <TableColumn fx:id="colAc" prefWidth="55.0" text="AC" />
+                        <TableColumn fx:id="colCustomerName" minWidth="0.0" prefWidth="408.0" text="Customer Name" />
+                        <TableColumn fx:id="colNoOfDays" minWidth="0.0" prefWidth="107.0" text="No of Days" />
+                        <TableColumn fx:id="colNoOfPersons" minWidth="0.0" prefWidth="102.0" text="No of Persons" />
+                        <TableColumn fx:id="colReservedDate" minWidth="0.0" prefWidth="198.0" text="Reserved Date" />
+                        <TableColumn fx:id="colRoomFree" minWidth="0.0" prefWidth="192.0" text="Room Free Date" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="562.0" layoutY="507.0" text="Cancel a Reservation" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="435.0" layoutY="547.0" text="Room ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtRoomId" layoutX="572.0" layoutY="541.0" prefHeight="32.0" prefWidth="214.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="384.0" layoutY="602.0" onAction="#btnCancelReservationOnAction" prefHeight="32.0" prefWidth="244.0" style="-fx-background-color: #018a22;" text="Cancle Reservation" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="653.0" layoutY="602.0" onAction="#btnMaintenanceOnAction" prefHeight="32.0" prefWidth="244.0" style="-fx-background-color: #018a22;" text="Make as on Maintenance" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
